@@ -1,0 +1,66 @@
+@import "global/Main";
+@import "fancy_title";
+
+$bgcolor: #f2f2f2;
+$main_color: #666666;
+$xl: 1140px;
+$lg: 960px;
+$md: 768px;
+$sm: 576px;
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background: $bgcolor none repeat scroll 0 0;
+  color: lighten(#545d61, 20%);
+}
+
+nav {
+  margin-bottom: 2em;
+}
+
+a {
+  transition: 0.3s all ease;
+  color: $main_color;
+  &:hover {
+    text-decoration: none;
+    color: $main_color;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
+  line-height: 1.45;
+  font-weight: normal;
+  color: #000;
+}
+
+.my-subheading,
+p {
+  color: rgba(#fff, 0.5);
+}
+
+a {
+  position: relative;
+  color: #fff;
+}
+
+footer {
+  margin-top: 4em;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  width: 200px;
+  height: auto;
+}

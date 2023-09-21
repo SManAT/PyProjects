@@ -1,0 +1,128 @@
+/**
+* Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+* http://cssreset.com
+*/
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+.vcenter {
+  vertical-align: middle;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+a {
+  outline: 0 none;
+  text-decoration: none;
+  cursor: pointer;
+}
+a:hover {
+  text-decoration: none;
+}
+
+#fusszeile {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 35px;
+  clear: both;
+}
+#fusszeile p {
+  text-align: center;
+}
+#fusszeile span {
+  margin-right: 10px;
+}
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #bfbfbf;
+  font-style: italic;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #bfbfbf;
+  font-style: italic;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #909;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome*/
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/*# sourceMappingURL=Main.css.map */

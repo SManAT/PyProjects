@@ -1,0 +1,99 @@
+@import 'reset';
+@import 'breakpoints';
+
+p {
+  margin-bottom: 0.5rem;
+}
+
+//Vertical align für Images mit Text dran, der Text wird am Bild zentriert
+.vcenter {
+  vertical-align: middle;
+}
+
+.transparent {
+  opacity: 0;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+a {
+  outline: 0 none;
+  text-decoration: none;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+#fusszeile {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-top: 35px;
+  clear: both;
+
+  p {
+    text-align: center;
+  }
+
+  span {
+    margin-right: 10px;
+  }
+}
+
+//Forms-------------------------------------------------------------------------
+
+::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #bfbfbf;
+  font-style: italic;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #bfbfbf;
+  font-style: italic;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
+  font-style: italic;
+}
+
+::placeholder {
+  /* Most modern browsers support this now. */
+  color: #909;
+}
+
+//Number Spinner bei Input mit Nummern
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* Chrome*/
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}

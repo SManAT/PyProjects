@@ -1,0 +1,15 @@
+1. Virtuelle Umgebung
+   STRG+SHIFT+P    env > Create Venv
+   oder via CLI 
+   python -m venv env
+
+2. Aktivieren mit 
+   STRG+SHIFT+P    Interpreter
+   oder via CLI 
+   .\.venv\Scripts\activate
+
+3. Using pip
+   .venv\Scripts\pip install -r requirements.txt
+
+   Sicherung mit 
+   .venv\Scripts\pip freeze > requirements.txt

@@ -1,0 +1,83 @@
+//Sizing max-width
+$screen544: 544px;
+$screen768: 768px;
+$screen992: 992px;
+$screen1200: 1200px;
+
+@mixin screen-xs {
+  @media (max-width: #{$screen544 - 1px}) {
+    @content;
+  }
+}
+
+@mixin screen-xs-up {
+  @media (min-width: #{$screen544 - 1px}) {
+    @content;
+  }
+}
+
+@mixin screen-sm {
+  @media (min-width: #{$screen544}) and (max-width: #{$screen768 - 1px}) {
+    @content;
+  }
+}
+
+@mixin screen-sm-down {
+  @media (max-width: #{$screen544}) {
+    @content;
+  }
+}
+
+@mixin screen-sm-up {
+  @media (min-width: #{$screen544}) {
+    @content;
+  }
+}
+
+@mixin screen-md {
+  @media (min-width: #{$screen768}) and (max-width: #{$screen992 - 1px}) {
+    @content;
+  }
+}
+
+@mixin screen-md-up {
+  @media (min-width: #{$screen768}) {
+    @content;
+  }
+}
+
+@mixin screen-md-down {
+  @media (max-width: #{$screen768}) {
+    @content;
+  }
+}
+
+@mixin screen-lg {
+  @media (min-width: #{$screen992}) {
+    @content;
+  }
+}
+
+@mixin screen-lg-up {
+  @media (min-width: #{$screen992}) {
+    @content;
+  }
+}
+
+@mixin screen-lg-down {
+  @media (max-width: #{$screen992}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen, only screen and (-o-min-device-pixel-ratio: 2/1), only screen, only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    @content;
+  }
+}
+
+@mixin print {
+  @media print {
+    @content;
+  }
+}
