@@ -1,7 +1,7 @@
 1. Virtuelle Umgebung
    STRG+SHIFT+P    env > Create Venv
    oder via CLI 
-   python -m venv env
+   python -m venv .venv
 
 2. Aktivieren mit 
    STRG+SHIFT+P    Interpreter
