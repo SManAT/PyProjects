@@ -10,9 +10,29 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }} ">
 
   <script src="{{ url_for('static', filename='node_modules/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static', filename='node_modules/jquery/dist/jquery.min.js') }}"></script>
 </head>
 
 <body>
+  <script>
+    $(function () {
+      $('button#start').click(function () {
+        $.ajax({
+          async: true,
+          type: "POST",
+          url: "/getFoto",
+          data: {},
+        })
+          .done(function (json) {
+            console.log("Done");
+          })
+          .fail(function (jqxhr, textStatus, err) {
+            console.log("Fehler beim Laden des Fotos");
+          });
+      })
+
+    })
+  </script>
   <nav class="navbar navbar-expand">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html">
@@ -33,6 +53,8 @@
       </div>
     </div>
   </nav>
+
+  <button id="start" class="btn btn-primary">START</button>
 
 
   <div class="container">
