@@ -1,5 +1,6 @@
+.venv\Scripts\python.exe -m pip install --upgrade pip
 .venv\Scripts\pip install -r requirements.txt
 cd src/resources/
-npm i
-cd ..
-cd ..
+CALL npm i
+cd..
+cd..
