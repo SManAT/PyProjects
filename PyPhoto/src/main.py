@@ -12,5 +12,10 @@ def index():
   #return static_url_path
   return render_template('index.html')
 
+@app.route("/getFoto", methods=['POST'])
+def getFotos():
+  #return static_url_path
+  return "Hallo"
+
 if __name__ == "__main__":
   app.run(debug=True)

@@ -1,20 +1,92 @@
-/* Error: Undefined mixin.
- *    ,
- * 17 | /   @include screen-md-down {
- * 18 | |     p {
- * 19 | |       font-size: math.div($header-height, 2);
- * 20 | |     }
- * 21 | \   }
- *    '
- *   src\resources\scss\fancy_title.scss 17:3  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 17 \2502  \250c    @include screen-md-down {\a 18 \2502  \2502      p {\a 19 \2502  \2502        font-size: math.div($header-height, 2);\a 20 \2502  \2502      }\a 21 \2502  \2514    }\a    \2575 \a   src\\resources\\scss\\fancy_title.scss 17:3  root stylesheet";
+.fancyheader {
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 900;
 }
+.fancyheader p {
+  font-size: 2em;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 1;
+  margin: 0;
+}
+@media (max-width: 768px) {
+  .fancyheader p {
+    font-size: 1em;
+  }
+}
+@media (min-width: 768px) {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    .fancyheader .fancy {
+      background-image: url("data:image/svg+xml,%3Csvg width='2250' height='900' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg%3E%3Cpath fill='%2300A080' d='M0 0h2255v899H0z'/%3E%3Ccircle cx='366' cy='207' r='366' fill='%2300FDCF'/%3E%3Ccircle cx='1777.5' cy='318.5' r='477.5' fill='%2300FDCF'/%3E%3Ccircle cx='1215' cy='737' r='366' fill='%23008060'/%3E%3C/g%3E%3C/svg%3E%0A");
+      background-size: 110% auto;
+      background-position: center;
+      color: transparent;
+      background-clip: text;
+    }
+  }
+}
+
+/* ----------------------------------------------------------------- */
+*,
+*:after {
+  box-sizing: border-box;
+}
+
+h1.underlined {
+  font-size: 2em;
+  font-family: sans-serif;
+}
+h1.underlined .underline {
+  position: relative;
+  /*   background: red; */
+}
+h1.underlined .underline.underline-mask:after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3/1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 3px solid hsl(280, 80%, 50%);
+  /* Use a conic gradient mask to hide and show the bits you want */
+  --spread: 140deg;
+  --start: 290deg;
+  mask: conic-gradient(from var(--start), white 0 var(--spread), transparent var(--spread));
+}
+h1.underlined .underline.underline-overflow {
+  display: inline-block;
+  /* A little extra padding and overflow hidden   */
+  overflow: hidden;
+  padding-bottom: clamp(1rem, 2vmin, 2rem);
+}
+h1.underlined .underline.underline-overflow:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  height: 150%;
+  aspect-ratio: 2.5/1;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  border-radius: 50%;
+  border: 3px solid hsl(10, 80%, 50%);
+}
+h1.underlined .underline.underline-clip:after {
+  content: "";
+  position: absolute;
+  top: 95%;
+  width: 150%;
+  aspect-ratio: 3/1;
+  left: 50%;
+  transform: translate(-50%, 0);
+  border-radius: 50%;
+  border: 3px solid hsl(130, 80%, 50%);
+  /* Use a clip-path to hide and show the bits you want */
+  clip-path: polygon(0 0, 50% 50%, 100% 0);
+}
+
+/* ----------------------------------------------------------------- */
+
+/*# sourceMappingURL=fancy_title.css.map */

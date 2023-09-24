@@ -24,7 +24,7 @@
           data: {},
         })
           .done(function (json) {
-            console.log("Done");
+            console.log(json);
           })
           .fail(function (jqxhr, textStatus, err) {
             console.log("Fehler beim Laden des Fotos");
@@ -36,7 +36,7 @@
   <nav class="navbar navbar-expand">
     <div class="container-fluid">
       <a class="navbar-brand" href="./index.html">
-        <h1 class="underlined">Flask <span class="underline underline-clip">Template</span></h1>
+        <h1 class="underlined">Py <span class="underline underline-clip">Foto Engine</span></h1>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarExpand"
         aria-controls="navbarSupportedContent" aria-expanded="true" aria-label="Toggle navigation">
@@ -54,38 +54,13 @@
     </div>
   </nav>
 
-  <button id="start" class="btn btn-primary">START</button>
-
-
-  <div class="container">
-    <div class="row">
-      <div class="col-10">
-        <h2 class="text-uppercase my-uppercase">Our Awesome Features</h2>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-        erat, sed diam voluptua. At vero eos et accusam et justo duo
-        dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
-        sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit
-        amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-        invidunt ut labore et dolore magna aliquyam erat, sed diam
-        voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
-        Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum
-        dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing
-        elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-        magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
-        justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea
-        takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel
-        eum iriure dolor in hendrerit in vulputate velit esse molestie
-        consequat, vel illum dolore eu feugiat nulla facilisis at vero
-        eros et accumsan et iusto odio dignissim qui blandit praesent
-        luptatum zzril delenit augue duis dolore te feugait nulla
-        facilisi. Lorem ipsum dolor sit amet,
-      </div>
-      <div class="col-2">
-        <img class="logo" src="{{ url_for('static', filename='img/flask.png') }}" />
-      </div>
-    </div>
+  <div class="d-flex justify-content-center">
+    <img class="img-fluid portrait img-shadow" src="{{ url_for('static', filename='img/kid.jpg') }}" />
   </div>
+  <div class="d-flex justify-content-center mt-4">
+    <button id="start" class="btn btn-primary">Foto aufnehmen</button>
+  </div>
+
   <footer class="text-center text-white">
     <div class="text-center p-1">
       © Mag. Stefan Hagmann
