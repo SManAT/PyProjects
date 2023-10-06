@@ -6,10 +6,20 @@
 2. Aktivieren mit 
    STRG+SHIFT+P    Interpreter
    oder via CLI 
+   
+   Win:
    .\.venv\Scripts\activate
+   Linux: 
+   source .venv/bin/activate
 
 3. Using pip
+   
+   Win:
    .venv\Scripts\pip install -r requirements.txt
-
    Sicherung mit 
    .venv\Scripts\pip freeze > requirements.txt
+
+   Linux: nach Aktivierung der venv 
+   pip install -r requirements.txt
+   Sicherung mit 
+   pip freeze > requirements.txt
