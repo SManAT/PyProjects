@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 from classes.LoadFoto import LoadFoto
+from werkzeug.middleware.proxy_fix import ProxyFix
 
 # set root path
 app = Flask(__name__,
@@ -8,6 +9,10 @@ app = Flask(__name__,
             static_folder='resources'
             )
 
+
+app.wsgi_app = ProxyFix(
+    app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
+)
 
 @app.route("/")
 def index():
