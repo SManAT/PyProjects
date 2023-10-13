@@ -26,8 +26,8 @@
           .done(function (json) {
             console.log(json);
           })
-          .fail(function (jqxhr, textStatus, err) {
-            console.log("Fehler beim Laden des Fotos");
+          .fail(function (err) {
+            console.log(err.responseText);
           });
       })
 

@@ -28,9 +28,8 @@ def getFoto():
     # blocking, wait to finish
     t.join()
   except RuntimeError as exception:
-    return f"An error occurred during getFoto endpoint: {exception}", 400
-  return "successful.", 200
-  return "successfully started.", 200
+    return f"An error occurred during /getFoto endpoint: {exception}", 400
+  return "successfully", 200
 
 
 if __name__ == "__main__":
