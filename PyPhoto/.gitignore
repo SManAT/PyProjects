@@ -143,3 +143,4 @@ psDebugging.ps1
 
 *.csv#
 *.ods
+.vscode/**
