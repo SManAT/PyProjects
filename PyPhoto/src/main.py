@@ -14,6 +14,7 @@ app.wsgi_app = ProxyFix(
     app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
 )
 
+
 @app.route("/")
 def index():
   # return static_url_path
@@ -24,12 +25,17 @@ def index():
 def getFoto():
   try:
     t = LoadFoto()
-    # t.start()
+    t.start()
     # blocking, wait to finish
     t.join()
   except RuntimeError as exception:
     return f"An error occurred during /getFoto endpoint: {exception}", 400
-  return "successfully", 200
+
+  # was there an error on CLI?
+  if t.getStderr() != "":
+    return t.getStderr(), 400
+  else:
+    return "Foto was successfully taken ...", 200
 
 
 if __name__ == "__main__":
