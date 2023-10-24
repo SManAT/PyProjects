@@ -17,6 +17,9 @@
   <script>
     $(function () {
       $('button#start').click(function () {
+        //show ajax loader
+        $('.ajax-loader-wrapper').removeClass('hidden');
+
         $.ajax({
           async: true,
           type: "POST",
@@ -25,6 +28,13 @@
         })
           .done(function (json) {
             console.log(json);
+            //hide ajax loader
+            $('.ajax-loader-wrapper').addClass('hidden');
+
+            //show Foto in Image
+            $('#theImage').attr("src", "{{ url_for('static', filename='capture/img.jpg') }}");
+            $('#theImage').removeClass('portrait');
+            $('#theImage').addClass('full-image');
           })
           .fail(function (err) {
             console.log(err.responseText);
@@ -55,10 +65,11 @@
   </nav>
 
   <div class="d-flex justify-content-center">
-    <img class="img-fluid portrait img-shadow" src="{{ url_for('static', filename='img/kid.jpg') }}" />
+    <img id="theImage" class="img-fluid portrait img-shadow" src="{{ url_for('static', filename='img/kid.jpg') }}" />
   </div>
   <div class="d-flex justify-content-center mt-4">
     <button id="start" class="btn btn-primary">Foto aufnehmen</button>
+    <button id="work" class="btn btn-warning">Foto bearbeiten ...</button>
   </div>
 
   <footer class="text-center text-white">
@@ -67,6 +78,18 @@
     </div>
   </footer>
 
+
+  <div class="ajax-loader-wrapper hidden">
+    <div class="overlay"></div>
+    <div class="center-screen">
+      <span class="ajax-loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+  </div>
 </body>
 
 </html>

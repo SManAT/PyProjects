@@ -8,7 +8,7 @@ class LoadFoto(threading.Thread):
   Lade ein Foto von der Kamera
   """
 
-  fotoname = "/home/schule/img.jpg"
+  fotoname = "./src/resources/capture/img.jpg"
 
   def __init__(self):
     # calls Constructor from Parent
@@ -26,7 +26,6 @@ class LoadFoto(threading.Thread):
     """ call the Camera """
     self._stderr = ""
     self._stdout = ""
-    print("Loading Foto ...")
 
     cmd = f"raspistill -o {self.fotoname}"
     proc = subprocess.Popen(cmd, shell=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)

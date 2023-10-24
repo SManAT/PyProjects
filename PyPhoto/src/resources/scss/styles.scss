@@ -1,5 +1,6 @@
 @import "global/Main";
 @import "fancy_title";
+@import "ajax-loader";
 
 $bgcolor: #f2f2f2;
 $main_color: #666666;
@@ -15,6 +16,13 @@ html {
 body {
   background: $bgcolor none repeat scroll 0 0;
   color: lighten(#545d61, 20%);
+}
+
+footer {
+  position: fixed;
+  height: 2em;
+  bottom: 0;
+  width: 100%;
 }
 
 nav {
@@ -67,6 +75,11 @@ footer {
 
 .portrait {
   height: 400px;
+  width: auto;
+}
+
+.full-image {
+  height: 80vh;
   width: auto;
 }
 
