@@ -1,0 +1,4 @@
+select = C,E,F,W
+max-complexity = 10
+ignore = E501, E266, E265, E128, F405, F403, E111, E201, E124, E121, E114, E202
+exclude = .git,__pycache__,docs/source/conf.py,old,build,dist,ui_*
